@@ -1,0 +1,2 @@
+class EntityspecialtiesController < ApplicationController
+end

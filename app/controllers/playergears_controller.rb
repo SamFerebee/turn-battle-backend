@@ -1,0 +1,2 @@
+class PlayergearsController < ApplicationController
+end
