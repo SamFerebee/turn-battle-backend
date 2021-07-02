@@ -10,7 +10,7 @@ class PlayersController < ApplicationController
         user = User.find_by(username: params[:username])
         spec = Specialty.find_by(name: params[:specialty])
         gear = {head: "none", chest: "none", hands: "none", legs: "none", feet: "none", neck: "none", ear1: "none", ear2: "none", ring1: "none", ring2: "none"}
-        player = Player.create(user: user, specialty: spec, name: params[:name], image: params[:image], wins: 0, losses: 0, attack: spec.attack, health: spec.health, defense: spec.defense, crit_rate: spec.crit_rate, crit_dmg: spec.crit_dmg, armor: gear, dodge_chance: spec.dodge_chance, armor_penetration: spec.armor_penetration, cc_immunity: spec.cc_immunity, money: 1000)
+        player = Player.create(user: user, specialty: spec, name: params[:name], image: params[:image], wins: 0, losses: 0, attack: spec.attack, health: spec.health, defense: spec.defense, crit_rate: spec.crit_rate, crit_dmg: spec.crit_dmg, armor: gear, dodge_chance: spec.dodge_chance, armor_penetration: spec.armor_penetration, cc_immunity: spec.cc_immunity, money: 1000, level: 1, exp_total: 0)
         render json: player
     end
 
@@ -24,6 +24,7 @@ class PlayersController < ApplicationController
         end
         render json: user
     end
+
 
     private
 

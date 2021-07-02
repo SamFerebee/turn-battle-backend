@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_26_001445) do
+ActiveRecord::Schema.define(version: 2021_06_08_030234) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,6 +91,8 @@ ActiveRecord::Schema.define(version: 2021_05_26_001445) do
     t.integer "armored_dodge_chance"
     t.integer "armored_cc_immunity"
     t.integer "money"
+    t.integer "level"
+    t.integer "exp_total"
     t.index ["specialty_id"], name: "index_players_on_specialty_id"
     t.index ["user_id"], name: "index_players_on_user_id"
   end
